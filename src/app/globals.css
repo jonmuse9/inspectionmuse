@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 120 100% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 120 100% 20%;
+    --accent-foreground: 120 100% 50%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 120 100% 50%;
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 0 0% 3%;
+    --foreground: 0 0% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 95%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 120 100% 40%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 120 100% 20%;
+    --accent-foreground: 120 100% 50%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 120 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Container & Layout Patterns */
+  .page-container {
+    @apply container mx-auto px-4;
+  }
+  
+  .section-container {
+    @apply py-16 bg-background;
+  }
+  
+  .section-container-alt {
+    @apply py-16 bg-muted/50;
+  }
+  
+  .content-wrapper {
+    @apply max-w-4xl mx-auto;
+  }
+  
+  .content-wrapper-lg {
+    @apply max-w-6xl mx-auto;
+  }
+  
+  .hero-section {
+    @apply relative min-h-[700px] flex items-center;
+  }
+  
+  .hero-overlay {
+    @apply absolute inset-0 bg-black/70;
+  }
+  
+  /* Grid Layouts */
+  .service-grid {
+    @apply grid md:grid-cols-2 lg:grid-cols-3 gap-8;
+  }
+  
+  .two-column-grid {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-12;
+  }
+  
+  /* Typography Scale */
+  .heading-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold;
+  }
+  
+  .heading-page {
+    @apply text-4xl md:text-5xl font-bold;
+  }
+  
+  .heading-section {
+    @apply text-3xl font-bold mb-6;
+  }
+  
+  .heading-card {
+    @apply text-2xl font-semibold;
+  }
+  
+  .text-subtitle {
+    @apply text-2xl md:text-3xl font-medium text-primary mb-6 italic;
+  }
+  
+  .text-lead {
+    @apply text-xl text-gray-200 mb-8;
+  }
+  
+  .text-description {
+    @apply text-xl text-muted-foreground;
+  }
+  
+  .text-muted {
+    @apply text-muted-foreground;
+  }
+  
+  /* Card Patterns */
+  .card-base {
+    @apply bg-card rounded-lg border p-6;
+  }
+  
+  .card-hover {
+    @apply bg-card rounded-lg border p-6 hover:shadow-lg transition-shadow;
+  }
+  
+  .card-service {
+    @apply bg-card rounded-lg border p-6 hover:shadow-lg transition-shadow;
+  }
+  
+  .card-highlight {
+    @apply bg-primary text-black rounded-lg p-8;
+  }
+  
+  /* Form Elements */
+  .form-input {
+    @apply w-full px-4 py-2 bg-background border border-border rounded-md focus:ring-primary focus:border-primary text-foreground;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-foreground mb-1;
+  }
+  
+  .form-select {
+    @apply w-full px-4 py-2 bg-background border border-border rounded-md focus:ring-primary focus:border-primary text-foreground;
+  }
+  
+  .form-textarea {
+    @apply w-full px-4 py-2 bg-background border border-border rounded-md focus:ring-primary focus:border-primary text-foreground;
+  }
+  
+  /* Button Combinations */
+  .btn-primary-large {
+    @apply bg-primary hover:bg-primary/90 text-black;
+  }
+  
+  .btn-outline-overlay {
+    @apply bg-transparent border-primary text-primary hover:bg-primary/20;
+  }
+  
+  /* Icon Patterns */
+  .icon-feature {
+    @apply h-8 w-8 text-primary;
+  }
+  
+  .icon-card {
+    @apply h-12 w-12 text-primary mb-4;
+  }
+  
+  .icon-inline {
+    @apply h-6 w-6 text-primary;
+  }
+  
+  /* List Patterns */
+  .feature-list {
+    @apply space-y-2;
+  }
+  
+  .feature-list-item {
+    @apply flex items-center gap-2;
+  }
+  
+  .bullet-point {
+    @apply h-1.5 w-1.5 bg-primary rounded-full;
+  }
+  
+  .bullet-point-dark {
+    @apply h-2 w-2 bg-black rounded-full;
+  }
+  
+  /* Flex Patterns */
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+  
+  .flex-between {
+    @apply flex items-center justify-between;
+  }
+  
+  .flex-start {
+    @apply flex items-start gap-4;
+  }
+  
+  /* Spacing Utilities */
+  .section-spacing {
+    @apply mb-12;
+  }
+  
+  .element-spacing {
+    @apply mb-6;
+  }
+  
+  .tight-spacing {
+    @apply mb-4;
+  }
+  
+  /* Text Center Patterns */
+  .text-center-section {
+    @apply text-center mb-12;
+  }
+  
+  /* Link Patterns */
+  .link-primary {
+    @apply text-muted-foreground hover:text-primary;
+  }
+  
+  .link-nav {
+    @apply text-muted-foreground hover:text-primary transition-colors;
+  }
+}

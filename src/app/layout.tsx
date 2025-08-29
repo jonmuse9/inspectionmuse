@@ -13,8 +13,12 @@ export const metadata: Metadata = {
   keywords: "home inspection, Carroll County, Maryland, MD, radon testing, termite inspection, mold testing, septic inspection",
   authors: [{ name: "InspectionMuse" }],
   icons: {
-    icon: "/images/logos/muse_logo_360px.png",
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/images/logos/muse_logo_360px.png', sizes: '360x215', type: 'image/png' }
+    ],
     apple: "/images/logos/muse_logo_360px.png",
+    shortcut: '/favicon.ico'
   },
   openGraph: {
     title: "InspectionMuse - Professional Home Inspections",
@@ -41,7 +45,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <Navigation />
         <main className="min-h-screen">{children}</main>
         <Footer />

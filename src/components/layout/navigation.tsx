@@ -6,6 +6,7 @@ import Image from "next/image"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { ScheduleButton } from "@/components/ui/schedule-button"
 import { Menu, X, ChevronDown } from "lucide-react"
 
 const navigation = [
@@ -30,7 +31,7 @@ const navigation = [
       { name: "Mold & Air Quality Testing", href: "/services/mold-testing" },
       { name: "Septic Inspections", href: "/services/septic-inspections" },
       { name: "Well Water Testing", href: "/services/well-water-testing" },
-      { name: "Sewer Scope Inspections", href: "/services/sewer-scope" },
+      // { name: "Sewer Scope Inspections", href: "/services/sewer-scope" },
     ]
   },
   { name: "Your Inspection", href: "/your-inspection" },
@@ -101,7 +102,8 @@ export function Navigation() {
                     href={item.href}
                     className={cn(
                       "px-3 py-2 rounded-md text-sm font-medium hover:bg-accent transition-colors",
-                      pathname === item.href ? "text-primary" : "text-foreground"
+                      pathname === item.href ? "text-primary" : "text-foreground",
+                      item.name === "Contact" ? "mr-4" : ""
                     )}
                   >
                     {item.name}
@@ -109,9 +111,9 @@ export function Navigation() {
                 )}
               </div>
             ))}
-            <Link href="/schedule">
-              <Button className="ml-4">Schedule Inspection</Button>
-            </Link>
+            <div className="ml-8">
+              <ScheduleButton />
+            </div>
           </div>
 
           <div className="md:hidden">
@@ -172,9 +174,7 @@ export function Navigation() {
               </div>
             ))}
             <div className="px-3 py-2">
-              <Link href="/schedule" className="w-full block">
-                <Button className="w-full">Schedule Inspection</Button>
-              </Link>
+              <ScheduleButton fullWidth={true} />
             </div>
           </div>
         </div>

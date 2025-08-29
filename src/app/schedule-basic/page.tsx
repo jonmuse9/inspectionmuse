@@ -2,6 +2,7 @@ import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
 import Image from "next/image";
 import { Calendar, Clock, CheckCircle, Shield } from "lucide-react";
+import { CallButton } from "@/components/ui/call-button";
 
 export default function BasicSchedulePage() {
   return (
@@ -92,9 +93,13 @@ export default function BasicSchedulePage() {
                 <p className="text-gray-600 mb-4">
                   Our team is here to assist you with scheduling
                 </p>
-                <a href="tel:443-555-0100" className="text-blue-600 font-semibold hover:underline">
-                  Call (443) 555-0100
-                </a>
+                <CallButton 
+                  variant="custom"
+                  showNumber={true}
+                  phoneNumber="443-555-0100"
+                  className="text-blue-600 font-semibold hover:underline p-0 h-auto"
+                  iconPosition="none"
+                />
               </div>
               <div className="bg-green-50 rounded-lg p-6 text-center">
                 <h3 className="font-semibold text-lg mb-2">Quick Response</h3>

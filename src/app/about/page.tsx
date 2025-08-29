@@ -2,6 +2,8 @@ import { Shield, Award, Users, Clock } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { CallButton } from "@/components/ui/call-button"
+import { ScheduleButton } from "@/components/ui/schedule-button"
 import InterNACHICertification from "@/components/InterNACHICertification"
 
 export default function AboutPage() {
@@ -110,18 +112,8 @@ export default function AboutPage() {
                 Contact us today to schedule your comprehensive home inspection
               </p>
               <div className="flex gap-4 justify-center">
-                <Link href="/schedule">
-                  <Button size="lg">Schedule Inspection</Button>
-                </Link>
-                <Link href="/contact">
-                  <Button 
-                    size="lg" 
-                    className="bg-black hover:bg-gray-800 border-black"
-                    style={{ color: '#01E701' }}
-                  >
-                    Contact Us
-                  </Button>
-                </Link>
+                <ScheduleButton />
+                <CallButton variant="white-overlay" />
               </div>
             </div>
           </div>

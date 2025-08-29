@@ -1,7 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Mail, Calendar, Shield, Award, DollarSign } from "lucide-react";
+import { CallButton } from "@/components/ui/call-button";
+import { ScheduleButton } from "@/components/ui/schedule-button";
+import { Mail, Shield, Award, DollarSign } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -33,28 +35,14 @@ export function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Link href="/schedule">
-              <Button size="lg" className="btn-primary-large">
-                <Calendar className="mr-2" />
-                Schedule Inspection
-              </Button>
-            </Link>
+            <ScheduleButton />
             <Link href="/services-fees#instant-quote">
-              <Button size="lg" className="btn-primary-large">
+              <Button size="lg" className="btn-green-outline border-2">
                 <DollarSign className="mr-2" />
                 Get a Quote
               </Button>
             </Link>
-            <Link href="/contact">
-              <Button
-                size="lg"
-                variant="outline"
-                className="btn-outline-overlay"
-              >
-                <Mail className="mr-2" />
-                Contact Us
-              </Button>
-            </Link>
+            <CallButton variant="white-overlay" />
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-white">
@@ -73,7 +61,7 @@ export function Hero() {
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <Calendar className="icon-feature" />
+              <Shield className="icon-feature" />
               <div>
                 <p className="font-semibold">Same Week Service</p>
                 <p className="text-sm text-gray-300">Fast scheduling</p>

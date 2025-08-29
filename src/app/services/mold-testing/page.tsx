@@ -1,38 +1,24 @@
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Droplets, CheckCircle, Info, ArrowRight } from "lucide-react"
+import { Droplets, CheckCircle, Microscope, Calendar, FileText } from "lucide-react"
+import { PartnershipInfo } from "@/components/services/PartnershipInfo"
+import { 
+  ServiceHeroSection,
+  ServiceCTASection,
+  ChecklistSection
+} from "@/components/services"
 
 export default function MoldTestingPage() {
   return (
     <main>
-      {/* Hero Section with Full-Width Image */}
-      <section className="relative h-[400px] md:h-[500px]">
-        <Image
-          src="/images/mold-testing.jpg"
-          alt="Professional mold testing equipment and inspection"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
-        <div className="absolute inset-0 flex items-center">
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl text-white">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                Mold Testing & Air Quality
-              </h1>
-              <p className="text-xl md:text-2xl mb-6 text-white/90">
-                Protect your family from hidden health hazards
-              </p>
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Schedule Mold Test
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceHeroSection
+        title="Mold Testing & Air Quality"
+        subtitle="Protect your family from hidden health hazards"
+        image="/images/mold-testing.jpg"
+        imageAlt="Professional mold testing equipment and inspection"
+        ctaText="Schedule Mold Test"
+        ctaHref="/schedule"
+      />
 
       {/* Service Overview */}
       <section className="py-16 bg-background">
@@ -60,89 +46,44 @@ export default function MoldTestingPage() {
               </div>
             </div>
 
-            <h2 className="text-2xl font-semibold mb-4">When to Test for Mold</h2>
-            <ul className="space-y-3 mb-12">
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                <span>Visible mold growth or discoloration</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                <span>Musty odors without visible source</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                <span>After water damage or flooding</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                <span>Health symptoms that improve when away from home</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <CheckCircle className="h-5 w-5 text-primary mt-0.5" />
-                <span>Before purchasing a property</span>
-              </li>
-            </ul>
+            <ChecklistSection
+              title="When to Test for Mold"
+              items={[
+                { text: "Visible mold growth or discoloration" },
+                { text: "Musty odors without visible source" },
+                { text: "After water damage or flooding" },
+                { text: "Health symptoms that improve when away from home" },
+                { text: "Before purchasing a property" }
+              ]}
+              className="mb-12"
+            />
 
-            <div className="bg-card p-8 rounded-lg border mb-12">
-              <h2 className="text-2xl font-semibold mb-4">Schedule Mold Testing</h2>
-              <p className="text-muted-foreground mb-6">
-                Protect your family's health with professional mold testing. 
-                Lab results typically available within 3-5 business days.
-              </p>
-              <Button size="lg">Book Mold Test</Button>
-            </div>
-
-            <div className="bg-accent/20 border border-primary/30 rounded-lg p-6">
-              <div className="flex items-start gap-3">
-                <Info className="h-6 w-6 text-primary mt-0.5 flex-shrink-0" />
-                <div>
-                  <h3 className="text-lg font-semibold mb-2">Partnership with Certified Specialists</h3>
-                  <p className="text-muted-foreground">
-                    To provide you with the most accurate and reliable results, our mold testing services are 
-                    performed by certified environmental testing specialists. InspectionMuse coordinates all 
-                    scheduling and ensures our trusted partners meet the highest industry standards. You'll 
-                    receive comprehensive lab-certified results through our unified reporting system, with 
-                    InspectionMuse as your single point of contact throughout the process.
-                  </p>
-                </div>
-              </div>
-            </div>
+            <PartnershipInfo
+              title="Environmental Testing Specialists"
+              description="Our mold testing services are performed by certified environmental testing specialists with expertise in indoor air quality assessment. InspectionMuse partners with licensed mold assessors who use calibrated equipment and follow IICRC standards for proper sampling protocols. All samples are analyzed by accredited laboratories, providing you with defensible results that include spore identification, concentration levels, and health risk assessments. We coordinate the entire process while ensuring professional standards are met."
+              icon={Microscope}
+            />
           </div>
         </div>
       </section>
 
-      {/* CTA Section with Background Image */}
-      <section className="relative py-20">
-        <Image
-          src="/images/attic-112266_1280.jpg"
-          alt="Attic space requiring professional mold testing"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center text-white">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Test Your Air Quality?
-            </h2>
-            <p className="text-xl mb-8 text-white/90">
-              Protect your family's health with professional mold testing. 
-              Lab-certified results you can trust for peace of mind.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                Schedule Mold Test
-              </Button>
-              <Link href="https://www.epa.gov/mold/mold-and-health" target="_blank" rel="noopener noreferrer">
-                <Button size="lg" variant="outline" className="bg-white/10 text-white border-white hover:bg-white/20">
-                  Learn About Mold Health Effects
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ServiceCTASection
+        title="Ready to Test Your Air Quality?"
+        description="Protect your family's health with professional mold testing. Lab-certified results you can trust for peace of mind."
+        image="/images/attic-112266_1280.jpg"
+        imageAlt="Attic space requiring professional mold testing"
+        primaryButton={{
+          text: "Schedule Mold Test",
+          href: "/schedule",
+          icon: Calendar
+        }}
+        secondaryButton={{
+          text: "Learn About Mold Health Effects",
+          href: "https://www.epa.gov/mold/mold-and-health",
+          external: true,
+          icon: FileText
+        }}
+      />
     </main>
   )
 }

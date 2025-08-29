@@ -173,6 +173,19 @@
     @apply bg-transparent border-primary text-primary hover:bg-primary/20;
   }
   
+  .btn-white-overlay {
+    @apply !bg-transparent !text-white border-white hover:!bg-white/10;
+  }
+  
+  .btn-green-outline {
+    @apply !bg-black/50 border-2;
+    color: #00FF00 !important;
+    border-color: #00FF00 !important;
+  }
+  .btn-green-outline:hover {
+    background-color: rgba(0, 255, 0, 0.1) !important;
+  }
+  
   /* Icon Patterns */
   .icon-feature {
     @apply h-8 w-8 text-primary;

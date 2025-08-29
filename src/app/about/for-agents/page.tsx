@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button"
-import { CheckCircle, Clock, FileText, Users, Calendar, Shield } from "lucide-react"
+import { CallButton } from "@/components/ui/call-button"
+import { ScheduleButton } from "@/components/ui/schedule-button"
+import { CheckCircle, Clock, FileText, Users, Shield } from "lucide-react"
 
 export default function ForAgentsPage() {
   return (
@@ -102,13 +104,8 @@ export default function ForAgentsPage() {
               Same-week appointments available with reports delivered within 24 hours.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-black text-primary hover:bg-black/80 border border-black flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
-                Schedule Inspection Now
-              </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-black text-black hover:bg-black/10">
-                Call (443) 555-0100
-              </Button>
+              <ScheduleButton variant="black-outline" text="Schedule Inspection Now" />
+              <CallButton variant="black-outline" showNumber={true} />
             </div>
             <p className="text-black/80 mt-6">
               Priority scheduling available for repeat agent partners

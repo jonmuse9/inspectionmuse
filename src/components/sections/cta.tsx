@@ -4,13 +4,13 @@ import Link from "next/link"
 
 export function CTA() {
   return (
-    <section className="py-16 bg-muted/50">
+    <section className="py-16 bg-black">
       <div className="container mx-auto px-4">
-        <div className="text-center text-foreground">
+        <div className="text-center text-white">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to Schedule Your Inspection?
           </h2>
-          <p className="text-xl mb-8 text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl mb-8 text-white/80 max-w-2xl mx-auto">
             Don't leave your biggest investment to chance. Get a thorough, 
             professional inspection from Carroll County's trusted experts.
           </p>
@@ -19,7 +19,7 @@ export function CTA() {
             <Link href="/schedule">
               <Button 
                 size="lg" 
-                className="bg-primary text-primary-foreground hover:bg-primary/90"
+                className="btn-primary-large"
               >
                 <Calendar className="mr-2" />
                 Schedule Online
@@ -29,17 +29,16 @@ export function CTA() {
             <Link href="/contact">
               <Button 
                 size="lg" 
-                className="bg-black hover:bg-gray-800 border-black"
-                style={{ color: '#01E701' }}
+                className="btn-white-overlay border-2"
               >
-                <Phone className="mr-2" style={{ color: '#01E701' }} />
+                <Phone className="mr-2" />
                 Contact Us
               </Button>
             </Link>
           </div>
 
           <div className="mt-8 text-lg">
-            <p className="text-muted-foreground">
+            <p className="text-white/60">
               Available 7 days a week • Same week appointments • 
               Reports within 24 hours
             </p>

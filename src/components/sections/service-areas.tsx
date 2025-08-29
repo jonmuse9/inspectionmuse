@@ -1,5 +1,6 @@
 import { MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 const serviceAreas = {
   maryland: {
@@ -90,7 +91,9 @@ export function ServiceAreas() {
               We're continuously expanding our service regions.
             </p>
 
-            <Button size="lg">Check Service Availability</Button>
+            <Link href="/contact">
+              <Button size="lg" className="btn-primary-large">Check Service Availability</Button>
+            </Link>
           </div>
 
           <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">

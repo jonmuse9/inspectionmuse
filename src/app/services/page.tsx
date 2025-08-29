@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Home, Wind, Bug, Droplets, Trash2, TestTube, ArrowRight, Users } from "lucide-react"
+import { Home, Wind, Bug, Droplets, Trash2, TestTube, ArrowRight, Users, Calculator } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 const services = [
@@ -85,7 +85,7 @@ export default function ServicesPage() {
                     ))}
                   </ul>
                   <Link href={service.href}>
-                    <Button variant="outline" className="w-full group">
+                    <Button variant="outline" className="btn-outline-overlay w-full group">
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                     </Button>
@@ -105,7 +105,10 @@ export default function ServicesPage() {
               Save time and money by bundling multiple inspection services. Contact us for package pricing 
               and to schedule your comprehensive property evaluation.
             </p>
-            <Button size="lg">Get Package Quote</Button>
+            <Button size="lg" className="btn-primary-large">
+              <Calculator className="mr-2 h-5 w-5" />
+              Get Package Quote
+            </Button>
           </div>
         </div>
       </section>

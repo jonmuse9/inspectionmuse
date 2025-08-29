@@ -1,8 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { CallButton } from "@/components/ui/call-button";
+import emailjs from "@emailjs/browser";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -16,20 +18,56 @@ export default function ContactPage() {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
 
+  // Initialize EmailJS with your public key
+  useEffect(() => {
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+    if (publicKey) {
+      emailjs.init(publicKey);
+    }
+  }, []);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
+      // Check if environment variables are set
+      const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+      const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+      const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+      console.log("EmailJS Config:", {
+        serviceId: serviceId ? "Set" : "Missing",
+        templateId: templateId ? "Set" : "Missing",
+        publicKey: publicKey ? "Set" : "Missing",
       });
 
-      if (response.ok) {
+      if (!serviceId || !templateId || !publicKey) {
+        throw new Error(
+          "EmailJS is not properly configured. Please check environment variables."
+        );
+      }
+
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        property_address: formData.propertyAddress || "Not provided",
+        inspection_type: formData.inspectionType,
+        message: formData.message || "No additional message provided",
+        to_name: "InspectionMuse Team",
+        reply_to: formData.email,
+      };
+
+      console.log("Sending email with params:", templateParams);
+
+      // Send email using EmailJS
+      const result = await emailjs.send(serviceId, templateId, templateParams);
+
+      console.log("EmailJS Result:", result);
+
+      if (result.status === 200) {
         alert(
           "Thank you! Your message has been sent successfully. We'll get back to you within 24 hours."
         );
@@ -44,13 +82,27 @@ export default function ContactPage() {
           message: "",
         });
       } else {
-        throw new Error("Failed to send message");
+        throw new Error(`EmailJS returned status ${result.status}`);
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("Error sending message:", error);
-      alert(
-        "Sorry, there was an error sending your message. Please try calling us directly at (443) 555-0100."
-      );
+
+      // More detailed error message
+      const errorMessage = error?.text || error?.message || "Unknown error";
+      console.error("Detailed error:", errorMessage);
+
+      if (
+        errorMessage.includes("Invalid") ||
+        errorMessage.includes("not found")
+      ) {
+        alert(
+          "Configuration error: Please ensure EmailJS is properly set up. For now, please call us at (443) 555-0100."
+        );
+      } else {
+        alert(
+          "Sorry, there was an error sending your message. Please try calling us directly at (443) 555-0100."
+        );
+      }
     } finally {
       setIsSubmitting(false);
     }
@@ -90,12 +142,13 @@ export default function ContactPage() {
                       <Phone className="icon-inline mt-1" />
                       <div>
                         <p className="font-semibold">Phone</p>
-                        <a
-                          href="tel:443-555-0100"
-                          className="link-primary"
-                        >
-                          (443) 555-0100
-                        </a>
+                        <CallButton
+                          variant="custom"
+                          showNumber={true}
+                          phoneNumber="443-555-0100"
+                          className="link-primary p-0 h-auto"
+                          iconPosition="none"
+                        />
                       </div>
                     </div>
 
@@ -116,10 +169,9 @@ export default function ContactPage() {
                       <MapPin className="icon-inline mt-1" />
                       <div>
                         <p className="font-semibold">Service Area</p>
-                        <p className="text-muted">
-                          Carroll County, MD
-                          <br />
-                          and surrounding areas
+                        <p className="link-primary">
+                          Serving Central Maryland
+                          <br />& South Central Pennsylvania
                         </p>
                       </div>
                     </div>
@@ -128,7 +180,7 @@ export default function ContactPage() {
                       <Clock className="icon-inline mt-1" />
                       <div>
                         <p className="font-semibold">Business Hours</p>
-                        <p className="text-muted">
+                        <p className="link-primary">
                           Monday - Friday: 8:00 AM - 6:00 PM
                           <br />
                           Saturday: 9:00 AM - 4:00 PM
@@ -166,14 +218,13 @@ export default function ContactPage() {
               </div>
 
               <div className="card-base p-8">
-                <h2 className="heading-card element-spacing">Send Us a Message</h2>
+                <h2 className="heading-card element-spacing">
+                  Send Us a Message
+                </h2>
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label
-                      htmlFor="name"
-                      className="form-label"
-                    >
+                    <label htmlFor="name" className="form-label">
                       Full Name *
                     </label>
                     <input
@@ -188,10 +239,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="email"
-                      className="form-label"
-                    >
+                    <label htmlFor="email" className="form-label">
                       Email Address *
                     </label>
                     <input
@@ -206,10 +254,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="phone"
-                      className="form-label"
-                    >
+                    <label htmlFor="phone" className="form-label">
                       Phone Number *
                     </label>
                     <input
@@ -224,10 +269,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="propertyAddress"
-                      className="form-label"
-                    >
+                    <label htmlFor="propertyAddress" className="form-label">
                       Property/Project Address
                     </label>
                     <input
@@ -241,10 +283,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="inspectionType"
-                      className="form-label"
-                    >
+                    <label htmlFor="inspectionType" className="form-label">
                       How can we help you? *
                     </label>
                     <select
@@ -259,10 +298,10 @@ export default function ContactPage() {
                       <option value="general">General Question</option>
                       <option value="quote">Request a Quote</option>
                       <option value="home">Home Inspection</option>
+                      <option value="home">Walk & Talk Consultation</option>
                       <option value="pre-listing">
                         Pre-Listing Inspection
                       </option>
-                      <option value="new-construction">New Construction</option>
                       <option value="radon">Radon Testing</option>
                       <option value="termite">Termite/WDI Inspection</option>
                       <option value="mold">Mold & Air Quality Testing</option>
@@ -274,10 +313,7 @@ export default function ContactPage() {
                   </div>
 
                   <div>
-                    <label
-                      htmlFor="message"
-                      className="form-label"
-                    >
+                    <label htmlFor="message" className="form-label">
                       Your Message
                     </label>
                     <textarea
@@ -294,14 +330,14 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     size="lg"
-                    className="w-full"
+                    className="btn-primary-large w-full"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
 
-                <p className="text-sm text-muted mt-4 text-center">
+                <p className="text-sm link-primary mt-4 text-center">
                   * Required fields. We'll get back to you within 24 hours.
                 </p>
               </div>

@@ -28,7 +28,7 @@ const navigation = [
       { name: "Pre-Listing Inspection", href: "/services/pre-listing-inspection" },
       { name: "Radon Testing", href: "/services/radon-testing" },
       { name: "Termite Inspections", href: "/services/termite-inspections" },
-      { name: "Mold & Air Quality Testing", href: "/services/mold-testing" },
+      // { name: "Mold & Air Quality Testing", href: "/services/mold-testing" },
       { name: "Septic Inspections", href: "/services/septic-inspections" },
       { name: "Well Water Testing", href: "/services/well-water-testing" },
       // { name: "Sewer Scope Inspections", href: "/services/sewer-scope" },

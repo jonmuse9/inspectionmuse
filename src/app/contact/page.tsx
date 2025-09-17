@@ -96,11 +96,11 @@ export default function ContactPage() {
         errorMessage.includes("not found")
       ) {
         alert(
-          "Configuration error: Please ensure EmailJS is properly set up. For now, please call us at (443) 555-0100."
+          "Configuration error: Please ensure EmailJS is properly set up. For now, please call us at (443) 508-8558."
         );
       } else {
         alert(
-          "Sorry, there was an error sending your message. Please try calling us directly at (443) 555-0100."
+          "Sorry, there was an error sending your message. Please try calling us directly at (443) 508-8558."
         );
       }
     } finally {
@@ -145,7 +145,7 @@ export default function ContactPage() {
                         <CallButton
                           variant="custom"
                           showNumber={true}
-                          phoneNumber="443-555-0100"
+                          phoneNumber="443-508-8558"
                           className="link-primary p-0 h-auto"
                           iconPosition="none"
                         />

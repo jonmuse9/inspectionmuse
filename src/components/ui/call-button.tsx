@@ -17,7 +17,7 @@ export function CallButton({
   variant = 'outline-overlay',
   size = 'lg',
   showNumber = false,
-  phoneNumber = "443-555-0100",
+  phoneNumber = "443-508-8558",
   className,
   iconPosition = 'left',
   iconSize = "h-4 w-4",

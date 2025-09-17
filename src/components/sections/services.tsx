@@ -31,13 +31,13 @@ const services = [
     image: "/images/CauseTermite-Damage-Cause-header.jpg",
     href: "/services/termite-inspections"
   },
-  {
-    title: "Mold & Air Quality Testing",
-    description: "Air quality and mold testing for a healthier home environment.",
-    icon: Droplets,
-    image: "/images/attic-112266_1280.jpg",
-    href: "/services/mold-testing"
-  },
+  // {
+  //   title: "Mold & Air Quality Testing",
+  //   description: "Air quality and mold testing for a healthier home environment.",
+  //   icon: Droplets,
+  //   image: "/images/attic-112266_1280.jpg",
+  //   href: "/services/mold-testing"
+  // },
   {
     title: "Septic Inspections",
     description: "Thorough septic system evaluation and functionality testing.",
@@ -52,13 +52,13 @@ const services = [
     image: "/images/Environmental-Testing-and-Research-Laboratories-Inc.jpg",
     href: "/services/well-water-testing"
   },
-  {
-    title: "Sewer Scope Inspections",
-    description: "Camera inspection of sewer lines to detect blockages and damage.",
-    icon: Waves,
-    image: "/images/pipes-2672184_1280.jpg",
-    href: "/services/sewer-scope"
-  }
+  // {
+  //   title: "Sewer Scope Inspections",
+  //   description: "Camera inspection of sewer lines to detect blockages and damage.",
+  //   icon: Waves,
+  //   image: "/images/pipes-2672184_1280.jpg",
+  //   href: "/services/sewer-scope"
+  // }
 ]
 
 export function Services() {
@@ -72,7 +72,7 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon
             return (

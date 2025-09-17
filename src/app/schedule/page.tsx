@@ -127,7 +127,7 @@ export default function SchedulePage() {
               <CallButton 
                 variant="custom"
                 showNumber={true}
-                phoneNumber="443-555-0100"
+                phoneNumber="443-508-8558"
                 className="text-primary font-semibold hover:underline p-0 h-auto"
                 iconPosition="none"
               />

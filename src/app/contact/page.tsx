@@ -1,10 +1,26 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CallButton } from "@/components/ui/call-button";
 import emailjs from "@emailjs/browser";
+
+declare global {
+  interface Window {
+    gtag?: (
+      command: string,
+      action: string,
+      parameters?: {
+        event_category?: string;
+        event_label?: string;
+        event_action?: string;
+        value?: number;
+        [key: string]: any;
+      }
+    ) => void;
+  }
+}
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -17,6 +33,8 @@ export default function ContactPage() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formEngagementStartTime = useRef<number | null>(null);
+  const hasEngaged = useRef(false);
 
   // Initialize EmailJS with your public key
   useEffect(() => {
@@ -68,6 +86,32 @@ export default function ContactPage() {
       console.log("EmailJS Result:", result);
 
       if (result.status === 200) {
+        // Track successful form submission
+        if (window.gtag) {
+          // Calculate engagement time
+          let engagementTime = 0;
+          if (formEngagementStartTime.current) {
+            engagementTime = Math.round((Date.now() - formEngagementStartTime.current) / 1000);
+          }
+
+          window.gtag('event', 'contact_form_submit', {
+            event_category: 'engagement',
+            event_label: 'contact_form',
+            event_action: 'submit',
+            value: engagementTime,
+          });
+
+          // Also track as a conversion event
+          window.gtag('event', 'conversion', {
+            send_to: 'AW-17580553822/NYmRCOCLuKIbEN7sh79B',
+            value: 1.0,
+            currency: 'USD',
+            transaction_id: `contact_${Date.now()}`, // Generate unique ID for each submission
+          });
+
+          console.log(`Tracking: contact_form - submit (${engagementTime}s)`);
+        }
+
         alert(
           "Thank you! Your message has been sent successfully. We'll get back to you within 24 hours."
         );
@@ -81,6 +125,10 @@ export default function ContactPage() {
           inspectionType: "",
           message: "",
         });
+
+        // Reset engagement tracking
+        hasEngaged.current = false;
+        formEngagementStartTime.current = null;
       } else {
         throw new Error(`EmailJS returned status ${result.status}`);
       }
@@ -113,6 +161,20 @@ export default function ContactPage() {
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
     >
   ) => {
+    // Track first engagement with form
+    if (!hasEngaged.current && window.gtag) {
+      hasEngaged.current = true;
+      formEngagementStartTime.current = Date.now();
+
+      window.gtag('event', 'widget_engagement', {
+        event_category: 'engagement',
+        event_label: 'contact_form',
+        event_action: 'focus',
+      });
+
+      console.log('Tracking: contact_form - focus');
+    }
+
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,

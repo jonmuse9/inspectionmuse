@@ -5,6 +5,20 @@ import { Button } from "@/components/ui/button"
 import { CallButton } from "@/components/ui/call-button"
 import { ScheduleButton } from "@/components/ui/schedule-button"
 import InterNACHICertification from "@/components/InterNACHICertification"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "About InspectionMuse - Professional Home Inspectors in Carroll County",
+  description: "Learn about InspectionMuse's commitment to providing thorough, professional home inspections in Carroll County, MD. Licensed, insured, and InterNACHI certified.",
+  alternates: {
+    canonical: "https://inspectionmuse.com/about/",
+  },
+  openGraph: {
+    title: "About InspectionMuse - Professional Home Inspectors",
+    description: "Learn about our commitment to providing thorough home inspections in Carroll County, MD.",
+    url: "https://inspectionmuse.com/about/",
+  },
+}
 
 export default function AboutPage() {
   return (

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Navigation } from "@/components/layout/navigation";
 import { Footer } from "@/components/layout/footer";
@@ -12,6 +13,9 @@ export const metadata: Metadata = {
   description: "Professional home inspection services in Carroll County, Maryland. Comprehensive inspections including radon testing, termite inspections, mold testing, and more.",
   keywords: "home inspection, Carroll County, Maryland, MD, radon testing, termite inspection, mold testing, septic inspection",
   authors: [{ name: "InspectionMuse" }],
+  alternates: {
+    canonical: "https://inspectionmuse.com/",
+  },
   icons: {
     icon: [
       { url: '/favicon.ico' },
@@ -45,6 +49,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* Google tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17580553822"
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17580553822');
+          `}
+        </Script>
+      </head>
       <body className={`${inter.className} antialiased`} suppressHydrationWarning>
         <Navigation />
         <main className="min-h-screen">{children}</main>

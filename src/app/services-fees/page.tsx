@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useRef } from "react";
 import {
   DollarSign,
   CheckCircle,
@@ -21,8 +24,17 @@ import {
 import { Button } from "@/components/ui/button";
 import { ScheduleButton } from "@/components/ui/schedule-button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { useIframeTracking } from "@/hooks/useIframeTracking";
 
 export default function ServicesFeesPage() {
+  const quoteIframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Track instant quote widget interactions
+  useIframeTracking(quoteIframeRef, {
+    eventLabel: 'instant_quote',
+    eventCategory: 'engagement',
+    trackEngagementTime: true,
+  });
   return (
     <main>
       {/* Hero Section with Full-Width Image */}
@@ -215,6 +227,7 @@ export default function ServicesFeesPage() {
             <Card className="shadow-lg">
               <CardContent className="p-0">
                 <iframe
+                  ref={quoteIframeRef}
                   src="https://widgets.spectora.com/#/my-inspection-company-706d6fa7e4/quote"
                   style={{ border: 0, height: "1100px", width: "100%" }}
                   title="Inspection Quote Calculator"

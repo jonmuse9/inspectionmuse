@@ -54,6 +54,21 @@ const services = [
   }
 ]
 
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Home Inspection Services - InspectionMuse Carroll County MD",
+  description: "Comprehensive home inspection services including radon testing, mold testing, termite inspections, septic inspections, and more in Carroll County, Maryland.",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/",
+  },
+  openGraph: {
+    title: "Professional Home Inspection Services - InspectionMuse",
+    description: "Complete home inspection services including radon, mold, termite, septic, and sewer scope inspections.",
+    url: "https://inspectionmuse.com/services/",
+  },
+}
+
 export default function ServicesPage() {
   return (
     <main>

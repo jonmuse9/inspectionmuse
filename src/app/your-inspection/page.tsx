@@ -20,6 +20,20 @@ import {
   ExternalLink,
   Calendar,
 } from "lucide-react";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Your Inspection - What to Expect from InspectionMuse",
+  description: "Learn about our modern home inspection process, comprehensive reporting, and what to expect during your inspection with InspectionMuse in Carroll County, MD.",
+  alternates: {
+    canonical: "https://inspectionmuse.com/your-inspection/",
+  },
+  openGraph: {
+    title: "Your Inspection Process - InspectionMuse",
+    description: "Modern home inspection reports designed with YOU in mind. Comprehensive, visual inspections for peace of mind.",
+    url: "https://inspectionmuse.com/your-inspection/",
+  },
+};
 
 export default function YourInspectionPage() {
   return (

@@ -6,6 +6,20 @@ import { ServiceCTASection } from "@/components/services/ServiceCTASection";
 import { ServiceOverviewSection } from "@/components/services/ServiceOverviewSection";
 import { ChecklistSection } from "@/components/services/ChecklistSection";
 import { ServiceProcessCard } from "@/components/services/ServiceProcessCard";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Septic System Inspections - InspectionMuse Carroll County MD",
+  description: "Professional septic system inspections in Carroll County, MD. Comprehensive evaluations of septic tanks, drain fields, and pumps to protect your property from costly issues.",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/septic-inspections/",
+  },
+  openGraph: {
+    title: "Septic System Inspections - InspectionMuse",
+    description: "Protect your property from costly underground issues with professional septic system inspections.",
+    url: "https://inspectionmuse.com/services/septic-inspections/",
+  },
+};
 
 export default function SepticInspectionsPage() {
   return (

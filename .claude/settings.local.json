@@ -1,16 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(mkdir:*)",
-      "bash",
-      "Bash(mkdir:*)",
-      "Bash(dir:*)",
-      "Bash(npm run dev:*)",
-      "Bash(npm install:*)",
-      "WebFetch(domain:www.baysidehomeinspection.com)",
-      "WebFetch(domain:www.rcshomeinspections.com)",
-      "WebFetch(domain:www.pomhi.net)",
-      "WebFetch(domain:app.spectora.com)"
+      "Bash(dir \"C:\\Development\\project_razorfish\\inspectionmuse\\public\")",
+      "Bash(test:*)",
+      "Bash(npm run build:*)",
+      "Bash(findstr:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

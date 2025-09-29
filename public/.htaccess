@@ -1,0 +1,29 @@
+# Apache .htaccess redirect rules for inspectionmuse.com
+
+# Enable mod_rewrite
+RewriteEngine On
+
+# Force HTTPS - redirect HTTP to HTTPS
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP:X-Forwarded-Proto} =http
+RewriteRule ^(.*)$ https://inspectionmuse.com/$1 [R=301,L]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.inspectionmuse\.com$ [NC]
+RewriteRule ^(.*)$ https://inspectionmuse.com/$1 [R=301,L]
+
+# Handle any other non-canonical hostnames
+RewriteCond %{HTTP_HOST} !^inspectionmuse\.com$ [NC]
+RewriteCond %{HTTP_HOST} !^localhost(:[0-9]+)?$ [NC]
+RewriteRule ^(.*)$ https://inspectionmuse.com/$1 [R=301,L]
+
+# Security headers for static hosting
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+</IfModule>
+
+# Disable server signature
+ServerSignature Off

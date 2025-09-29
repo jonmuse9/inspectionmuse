@@ -1,0 +1,11 @@
+# Netlify redirect rules for inspectionmuse.com
+
+# Force HTTPS - redirect HTTP to HTTPS
+http://inspectionmuse.com/* https://inspectionmuse.com/:splat 301!
+http://www.inspectionmuse.com/* https://inspectionmuse.com/:splat 301!
+
+# Redirect www to non-www (HTTPS)
+https://www.inspectionmuse.com/* https://inspectionmuse.com/:splat 301!
+
+# Catch-all for any other domains pointing to this site
+http://*/* https://inspectionmuse.com/:splat 301!

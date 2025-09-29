@@ -4,9 +4,17 @@ import Image from "next/image";
 import { Calendar, Clock, CheckCircle, Shield } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { CallButton } from "@/components/ui/call-button";
+import { useIframeTracking } from "@/hooks/useIframeTracking";
 
 export default function SchedulePage() {
   const iframeRef = useRef<HTMLIFrameElement>(null);
+
+  // Track schedule inspection widget interactions
+  useIframeTracking(iframeRef, {
+    eventLabel: 'schedule_inspection',
+    eventCategory: 'engagement',
+    trackEngagementTime: true,
+  });
 
   useEffect(() => {
     const handleMessage = (event: MessageEvent) => {

@@ -1,0 +1,43 @@
+{
+  "name": "InspectionMuse - Professional Home Inspection Services",
+  "short_name": "InspectionMuse",
+  "description": "Professional home inspection services including radon testing, mold testing, termite inspections, septic inspections, and more. Serving the community with thorough, reliable inspections.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "orientation": "portrait",
+  "lang": "en-US",
+  "categories": ["business", "productivity", "utilities"],
+  "icons": [
+    {
+      "src": "/images/logos/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/images/logos/muse_logo_large.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Schedule Inspection",
+      "url": "/schedule",
+      "description": "Schedule a home inspection appointment"
+    },
+    {
+      "name": "Services",
+      "url": "/services",
+      "description": "View our inspection services"
+    },
+    {
+      "name": "Contact",
+      "url": "/contact",
+      "description": "Get in touch with us"
+    }
+  ]
+}

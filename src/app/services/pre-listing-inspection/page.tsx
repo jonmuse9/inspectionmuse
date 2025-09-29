@@ -4,6 +4,21 @@ import { ServiceHeroSection } from "@/components/services/ServiceHeroSection"
 import { ServiceCTASection } from "@/components/services/ServiceCTASection"
 import { ServiceOverviewSection } from "@/components/services/ServiceOverviewSection"
 import { ChecklistSection } from "@/components/services/ChecklistSection"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Pre-Listing Inspection - Sell with Confidence Carroll County MD",
+  description: "Pre-listing inspection in Carroll County, MD. Know your home's condition before listing. Move-In Certified® inspection to build buyer confidence and sell faster.",
+  keywords: "pre-listing inspection, home selling, Move-In Certified, Carroll County MD, seller inspection, listing preparation, Maryland home selling, property condition",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/pre-listing-inspection/",
+  },
+  openGraph: {
+    title: "Pre-Listing Inspection - InspectionMuse Carroll County",
+    description: "Pre-listing inspection in Carroll County, MD. Sell with confidence knowing your home's condition before listing.",
+    url: "https://inspectionmuse.com/services/pre-listing-inspection/",
+  },
+}
 
 export default function PreListingInspectionPage() {
   return (
@@ -12,7 +27,7 @@ export default function PreListingInspectionPage() {
         title="Pre-Listing Inspection"
         subtitle="Sell with confidence. Know your home's condition before you list."
         image="/images/large-home-389271_1280.jpg"
-        imageAlt="Large home ready for pre-listing inspection"
+        imageAlt="Large residential home Carroll County MD ready for professional pre-listing inspection"
         ctaText="Schedule Pre-Listing Inspection"
         ctaHref="#schedule"
       />
@@ -20,7 +35,7 @@ export default function PreListingInspectionPage() {
       <ServiceOverviewSection
         sideImage={{
           src: "/images/businesswoman-using-tablet-analysis.jpg",
-          alt: "Professional inspector analyzing property data for pre-listing report"
+          alt: "Professional home inspector analyzing property data pre-listing report Carroll County Maryland"
         }}
       >
         <p className="text-xl text-muted-foreground mb-8">
@@ -146,7 +161,7 @@ export default function PreListingInspectionPage() {
         title="Ready to Get the Pre-Listing Advantage?"
         description="Sell with confidence and negotiate from a position of strength. Know your home's condition before you list."
         image="/images/large-home-389271_1280.jpg"
-        imageAlt="Large beautiful home ready for pre-listing inspection"
+        imageAlt="Beautiful residential property Carroll County MD ready for comprehensive pre-listing inspection"
         primaryButton={{
           text: "Schedule Pre-Listing Inspection",
           href: "#schedule",

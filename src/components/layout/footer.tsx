@@ -11,7 +11,7 @@ export function Footer() {
             <div className="flex items-center mb-4">
               <Image
                 src="/images/logos/muse_logo_paths.svg"
-                alt="InspectionMuse Logo"
+                alt="InspectionMuse professional home inspection company Central Maryland Pennsylvania"
                 width={250}
                 height={149}
                 className="h-[62.5px] w-auto"

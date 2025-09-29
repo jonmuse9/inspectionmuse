@@ -19,6 +19,21 @@ import {
   ServiceOverviewSection,
   ChecklistSection,
 } from "@/components/services";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Walk & Talk Consultation - Quick Property Assessment Carroll County MD",
+  description: "Walk & Talk consultation in Carroll County, MD. Quick 30-45 minute property assessment with immediate verbal feedback before making an offer.",
+  keywords: "walk and talk, property consultation, quick assessment, Carroll County MD, pre-offer inspection, property evaluation, competitive market, Maryland",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/walk-and-talk/",
+  },
+  openGraph: {
+    title: "Walk & Talk Consultation - InspectionMuse Carroll County",
+    description: "Quick property assessment in Carroll County, MD. 30-45 minute consultation with immediate professional insights.",
+    url: "https://inspectionmuse.com/services/walk-and-talk/",
+  },
+};
 
 export default function WalkAndTalkPage() {
   return (
@@ -27,7 +42,7 @@ export default function WalkAndTalkPage() {
         title="Walk & Talk Consultation"
         subtitle="Quick property insights before making an offer - perfect for today's competitive real estate market"
         image="/images/Nov-30-home-inspector-career.jpg"
-        imageAlt="Professional inspector conducting walk and talk consultation with client"
+        imageAlt="Professional home inspector conducting walk and talk consultation Carroll County MD property evaluation"
         ctaText="Schedule Walk & Talk"
         ctaHref="/schedule"
       />
@@ -35,7 +50,7 @@ export default function WalkAndTalkPage() {
       <ServiceOverviewSection
         sideImage={{
           src: "/images/T4Ga06A7REyYUlJUDWxm_How_Much_Does_a_Walk_and_Talk_Consultation_Cost.jpg",
-          alt: "Professional walk and talk consultation",
+          alt: "Professional walk and talk home consultation Carroll County Maryland real estate",
         }}
       >
         <p className="text-xl text-muted-foreground mb-8">

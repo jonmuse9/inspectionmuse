@@ -1,4 +1,4 @@
-import { Shield, Award, Users, Clock } from "lucide-react"
+import { Shield, Award, Users, Clock, Building } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -17,6 +17,14 @@ export const metadata: Metadata = {
     title: "About InspectionMuse - Professional Home Inspectors",
     description: "Learn about our commitment to providing thorough home inspections in Carroll County, MD.",
     url: "https://inspectionmuse.com/about/",
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@InspectionMuse",
+    creator: "@InspectionMuse",
+    title: "About InspectionMuse - Professional Home Inspectors",
+    description: "Learn about our commitment to providing thorough home inspections in Carroll County, MD.",
+    images: ["/images/logos/muse_logo_360px.png"],
   },
 }
 
@@ -118,6 +126,23 @@ export default function AboutPage() {
                   <span className="text-foreground">Professional, courteous service every time</span>
                 </li>
               </ul>
+            </div>
+
+            <div className="bg-card rounded-lg border border-border p-8 mt-8">
+              <div className="flex items-start gap-4">
+                <Building className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+                <div className="flex-1">
+                  <h2 className="text-2xl font-bold mb-3">Structural Engineering Partner</h2>
+                  <p className="text-foreground mb-4">
+                    When structural concerns arise during your inspection, we connect you with JH Engineering, LLC—a licensed firm with 20+ years of experience providing structural investigations, foundation analysis, and renovation assessments throughout the region.
+                  </p>
+                  <Link href="/about/our-partners">
+                    <Button className="btn-primary">
+                      View Our Partners
+                    </Button>
+                  </Link>
+                </div>
+              </div>
             </div>
 
             <div className="text-center mt-12">

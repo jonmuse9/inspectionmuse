@@ -41,7 +41,7 @@ export default function ServicesFeesPage() {
       <section className="relative h-[400px] md:h-[500px]">
         <Image
           src="/images/businesswoman-using-tablet-analysis.jpg"
-          alt="Professional providing transparent pricing analysis for home inspection services"
+          alt="Professional inspector providing transparent pricing analysis home inspection services Carroll County MD"
           fill
           className="object-cover"
           priority
@@ -256,7 +256,7 @@ export default function ServicesFeesPage() {
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4 group">
                 <Image
                   src="/images/Roof-Inspection-1-scaled.jpg"
-                  alt="Professional roof inspection using advanced techniques"
+                  alt="Licensed home inspector examining residential roof using advanced techniques Carroll County Maryland"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -278,7 +278,7 @@ export default function ServicesFeesPage() {
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4 group">
                 <Image
                   src="/images/attic-112266_1280.jpg"
-                  alt="Thorough attic inspection showing attention to detail"
+                  alt="Comprehensive attic inspection detailed analysis insulation ventilation Carroll County MD home"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -298,7 +298,7 @@ export default function ServicesFeesPage() {
               <div className="relative h-[200px] rounded-lg overflow-hidden mb-4 group">
                 <Image
                   src="/images/basement-466197_1280.jpg"
-                  alt="Detailed basement inspection with comprehensive reporting"
+                  alt="Professional basement foundation inspection comprehensive reporting Maryland home evaluation"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -338,7 +338,7 @@ export default function ServicesFeesPage() {
       <section className="relative py-20">
         <Image
           src="/images/charming-yellow-house-with-wooden-windows-green-grassy-garden.jpg"
-          alt="Beautiful home exterior ready for professional inspection services"
+          alt="Charming residential home exterior Carroll County MD ready for professional inspection services"
           fill
           className="object-cover"
         />

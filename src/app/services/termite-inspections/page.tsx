@@ -5,6 +5,21 @@ import { ServiceHeroSection } from "@/components/services/ServiceHeroSection";
 import { ServiceCTASection } from "@/components/services/ServiceCTASection";
 import { ServiceOverviewSection } from "@/components/services/ServiceOverviewSection";
 import { ChecklistSection } from "@/components/services/ChecklistSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Termite & Wood-Destroying Insect Inspections - Carroll County MD",
+  description: "Professional termite and WDI inspections in Carroll County, MD. Licensed pest control inspectors providing NPMA-33 reports to protect your property investment.",
+  keywords: "termite inspection, WDI inspection, wood destroying insects, Carroll County MD, NPMA-33, pest inspection, termite damage, Maryland termite inspector",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/termite-inspections/",
+  },
+  openGraph: {
+    title: "Termite & WDI Inspections - InspectionMuse Carroll County",
+    description: "Professional termite and wood-destroying insect inspections in Carroll County, MD. Licensed inspectors providing official NPMA-33 reports.",
+    url: "https://inspectionmuse.com/services/termite-inspections/",
+  },
+};
 
 export default function TermiteInspectionsPage() {
   return (
@@ -13,7 +28,7 @@ export default function TermiteInspectionsPage() {
         title="Termite & Wood-Destroying Insect Inspections"
         subtitle="Protect your investment from costly damage"
         image="/images/man-checks-the-interior-of-a-crawl-space.jpg"
-        imageAlt="Professional inspector checking crawl space for termites"
+        imageAlt="Licensed termite inspector checking crawl space wood destroying insects Carroll County MD"
         ctaText="Schedule Inspection"
         ctaHref="#contact"
       />
@@ -21,7 +36,7 @@ export default function TermiteInspectionsPage() {
       <ServiceOverviewSection
         sideImage={{
           src: "/images/homeguide-foundation-with-cracks-and-crumbing-concrete.jpg",
-          alt: "Foundation damage from wood-destroying insects",
+          alt: "Foundation damage from wood-destroying insects termite damage Carroll County Maryland home",
         }}
       >
         <p className="text-xl text-muted-foreground mb-8">

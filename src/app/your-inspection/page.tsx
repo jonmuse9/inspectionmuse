@@ -59,7 +59,7 @@ export default function YourInspectionPage() {
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl mb-6">
                 <Image
                   src="/images/roof-inspection-on-residential-home.jpg"
-                  alt="Professional roof inspection on residential home"
+                  alt="Professional home inspector examining residential roof Carroll County Maryland property"
                   fill
                   className="object-cover"
                   priority
@@ -201,7 +201,7 @@ export default function YourInspectionPage() {
               <div className="relative h-[1293px] md:h-[1547px] w-full rounded-lg overflow-hidden shadow-xl">
                 <Image
                   src="/images/what-included-home-inspection-1-768x2753.jpg"
-                  alt="Complete home inspection checklist infographic"
+                  alt="Comprehensive home inspection checklist infographic what to expect Carroll County MD"
                   fill
                   className="object-contain"
                   priority
@@ -358,7 +358,7 @@ export default function YourInspectionPage() {
               <div className="relative h-[400px] w-full rounded-lg overflow-hidden shadow-lg">
                 <Image
                   src="/images/rear-view-young-college-student.jpg"
-                  alt="Person reviewing detailed inspection report"
+                  alt="Homeowner reviewing comprehensive inspection report Carroll County Maryland home purchase"
                   fill
                   className="object-cover"
                 />
@@ -443,7 +443,7 @@ export default function YourInspectionPage() {
         <div className="absolute inset-0">
           <Image
             src="/images/businesswoman-using-tablet-analysis.jpg"
-            alt="Professional reviewing inspection report on tablet"
+            alt="Professional inspector analyzing detailed home inspection report on tablet Maryland"
             fill
             className="object-cover"
             priority

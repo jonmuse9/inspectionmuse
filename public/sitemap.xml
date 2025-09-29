@@ -1,131 +1,249 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <!-- Main Pages -->
   <url>
     <loc>https://inspectionmuse.com/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/logos/muse_logo_large.png</image:loc>
+      <image:title>InspectionMuse Logo</image:title>
+      <image:caption>Professional Home Inspection Services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/Jim%20Krumm2.jpg</image:loc>
+      <image:title>Jim Krumm - Home Inspector</image:title>
+      <image:caption>Professional Home Inspector Jim Krumm</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/Nov-30-home-inspector-career.jpg</image:loc>
+      <image:title>Home Inspector Services</image:title>
+      <image:caption>Professional home inspection services overview</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services-fees/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/businesswoman-using-tablet-analysis.jpg</image:loc>
+      <image:title>Services and Fees</image:title>
+      <image:caption>Transparent pricing for home inspection services</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/your-inspection/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/schedule/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/contact/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/colleagues-working-cozy-office-medium-shot.jpg</image:loc>
+      <image:title>Contact Us</image:title>
+      <image:caption>Get in touch with InspectionMuse</image:caption>
+    </image:image>
   </url>
 
   <!-- About Pages -->
   <url>
     <loc>https://inspectionmuse.com/about/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/Jim%20Krumm2.jpg</image:loc>
+      <image:title>About Jim Krumm</image:title>
+      <image:caption>Professional Home Inspector with years of experience</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/about/for-agents/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/rear-view-young-college-student.jpg</image:loc>
+      <image:title>For Real Estate Agents</image:title>
+      <image:caption>Partnership opportunities with real estate agents</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://inspectionmuse.com/about/our-partners/</loc>
+    <lastmod>2024-09-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/about/service-areas/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/beautiful-shot-big-farmhouse-clear-blue-sky.jpg</image:loc>
+      <image:title>Service Areas</image:title>
+      <image:caption>Areas we serve for home inspections</image:caption>
+    </image:image>
   </url>
 
   <!-- Service Pages -->
   <url>
     <loc>https://inspectionmuse.com/services/home-inspections/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/Roof-Inspection-1-scaled.jpg</image:loc>
+      <image:title>Home Inspections</image:title>
+      <image:caption>Comprehensive home inspection services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/what-included-home-inspection-1-768x2753.jpg</image:loc>
+      <image:title>What's Included in Home Inspection</image:title>
+      <image:caption>Detailed overview of home inspection components</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services/radon-testing/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/basement-466197_1280.jpg</image:loc>
+      <image:title>Radon Testing</image:title>
+      <image:caption>Professional radon testing services for homes</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services/mold-testing/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/mold-testing.jpg</image:loc>
+      <image:title>Mold Testing</image:title>
+      <image:caption>Professional mold testing and inspection services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/Environmental-Testing-and-Research-Laboratories-Inc.webp</image:loc>
+      <image:title>Environmental Testing Lab</image:title>
+      <image:caption>Environmental testing and research laboratory</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services/termite-inspections/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/CauseTermite-Damage-Cause-header.jpg</image:loc>
+      <image:title>Termite Inspections</image:title>
+      <image:caption>Professional termite damage inspection services</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services/septic-inspections/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/1702219498banner-septic-inspection.jpg</image:loc>
+      <image:title>Septic Inspections</image:title>
+      <image:caption>Professional septic system inspection services</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services/sewer-scope/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/Plumbing-5.jpg</image:loc>
+      <image:title>Sewer Scope Inspections</image:title>
+      <image:caption>Professional sewer line inspection services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/pipes-2672184_1280.jpg</image:loc>
+      <image:title>Sewer Pipes</image:title>
+      <image:caption>Sewer pipe inspection and assessment</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services/well-water-testing/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/water-well-inspection-541292430.jpg</image:loc>
+      <image:title>Well Water Testing</image:title>
+      <image:caption>Professional well water testing and inspection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/testing-water-quality-lab.jpeg</image:loc>
+      <image:title>Water Quality Lab Testing</image:title>
+      <image:caption>Laboratory water quality testing services</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services/pre-listing-inspection/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/real-estate-9563983_1280.jpg</image:loc>
+      <image:title>Pre-Listing Inspections</image:title>
+      <image:caption>Pre-listing home inspection services for sellers</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://inspectionmuse.com/services/walk-and-talk/</loc>
-    <lastmod>2025-01-26</lastmod>
+    <lastmod>2024-09-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/walk-and-talk.jpg</image:loc>
+      <image:title>Walk and Talk Consultations</image:title>
+      <image:caption>Walk and talk consultation services</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://inspectionmuse.com/images/T4Ga06A7REyYUlJUDWxm_How_Much_Does_a_Walk_and_Talk_Consultation_Cost.jpg</image:loc>
+      <image:title>Walk and Talk Consultation Cost</image:title>
+      <image:caption>Walk and talk consultation pricing information</image:caption>
+    </image:image>
   </url>
 </urlset>

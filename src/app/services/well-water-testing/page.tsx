@@ -6,6 +6,21 @@ import { ServiceCTASection } from "@/components/services/ServiceCTASection";
 import { ServiceOverviewSection } from "@/components/services/ServiceOverviewSection";
 import { ServiceProcessCard } from "@/components/services/ServiceProcessCard";
 import { ChecklistSection } from "@/components/services/ChecklistSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Well Water Testing - Professional Water Quality Testing Carroll County MD",
+  description: "Professional well water testing in Carroll County, MD. State-certified laboratory analysis for bacteria, nitrates, and contaminants to ensure safe drinking water.",
+  keywords: "well water testing, water quality testing, Carroll County MD, bacteria testing, nitrates, water contamination, private well testing, Maryland water testing",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/well-water-testing/",
+  },
+  openGraph: {
+    title: "Well Water Testing - InspectionMuse Carroll County",
+    description: "Professional well water testing in Carroll County, MD. State-certified laboratory analysis to ensure safe drinking water for your family.",
+    url: "https://inspectionmuse.com/services/well-water-testing/",
+  },
+};
 
 export default function WellWaterTestingPage() {
   return (
@@ -14,7 +29,7 @@ export default function WellWaterTestingPage() {
         title="Well Water Testing"
         subtitle="Ensure your family's water safety with professional testing"
         image="/images/water-well-inspection-541292430.jpg"
-        imageAlt="Well water testing equipment and setup"
+        imageAlt="Professional well water testing equipment Carroll County MD residential property water quality"
         ctaText="Schedule Water Test"
         ctaHref="#schedule"
       />
@@ -22,7 +37,7 @@ export default function WellWaterTestingPage() {
       <ServiceOverviewSection
         sideImage={{
           src: "/images/McCleary_150717_4075-scaled.jpg",
-          alt: "Professional well water testing and analysis",
+          alt: "Professional well water testing analysis laboratory Carroll County Maryland safe drinking water",
         }}
       >
         <p className="text-xl text-muted-foreground mb-8">

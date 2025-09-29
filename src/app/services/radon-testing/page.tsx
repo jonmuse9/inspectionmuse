@@ -1,13 +1,28 @@
 import { Button } from "@/components/ui/button"
 import { AlertTriangle, CheckCircle, Shield, Calendar, FileText } from "lucide-react"
 import { PartnershipInfo } from "@/components/services/PartnershipInfo"
-import { 
+import {
   ServiceHeroSection,
   ServiceCTASection,
   ServiceGallerySection,
   ChecklistSection,
   TestingResultsCard
 } from "@/components/services"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Radon Testing - Professional Radon Gas Detection Carroll County MD",
+  description: "Professional radon testing in Carroll County, MD. EPA-approved continuous monitoring to detect dangerous radon gas levels and protect your family's health.",
+  keywords: "radon testing, radon gas, Carroll County MD, radon detector, lung cancer prevention, EPA radon testing, Maryland radon levels",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/radon-testing/",
+  },
+  openGraph: {
+    title: "Radon Testing - InspectionMuse Carroll County",
+    description: "Professional radon testing in Carroll County, MD. EPA-approved methods to detect dangerous radon gas levels.",
+    url: "https://inspectionmuse.com/services/radon-testing/",
+  },
+}
 
 export default function RadonTestingPage() {
   return (

@@ -67,6 +67,14 @@ export const metadata: Metadata = {
     description: "Complete home inspection services including radon, mold, termite, septic, and sewer scope inspections.",
     url: "https://inspectionmuse.com/services/",
   },
+  twitter: {
+    card: "summary_large_image",
+    site: "@InspectionMuse",
+    creator: "@InspectionMuse",
+    title: "Professional Home Inspection Services - InspectionMuse",
+    description: "Complete home inspection services including radon, mold, termite, septic, and sewer scope inspections.",
+    images: ["/images/logos/muse_logo_360px.png"],
+  },
 }
 
 export default function ServicesPage() {

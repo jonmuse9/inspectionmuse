@@ -2,11 +2,26 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Droplets, CheckCircle, Microscope, Calendar, FileText } from "lucide-react"
 import { PartnershipInfo } from "@/components/services/PartnershipInfo"
-import { 
+import {
   ServiceHeroSection,
   ServiceCTASection,
   ChecklistSection
 } from "@/components/services"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Mold Testing & Air Quality Assessment - Carroll County MD",
+  description: "Professional mold testing and air quality assessment in Carroll County, MD. Lab-certified mold detection to protect your family from hidden health hazards.",
+  keywords: "mold testing, air quality, mold inspection, Carroll County MD, indoor air quality, mold detection, Maryland mold testing, health hazards",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/mold-testing/",
+  },
+  openGraph: {
+    title: "Mold Testing & Air Quality - InspectionMuse Carroll County",
+    description: "Professional mold testing and air quality assessment in Carroll County, MD. Lab-certified analysis to protect your family's health.",
+    url: "https://inspectionmuse.com/services/mold-testing/",
+  },
+}
 
 export default function MoldTestingPage() {
   return (

@@ -17,6 +17,7 @@ const navigation = [
     children: [
       { name: "Service Areas", href: "/about/service-areas" },
       { name: "For Agents", href: "/about/for-agents" },
+      { name: "Our Partners", href: "/about/our-partners" },
     ]
   },
   {
@@ -51,7 +52,7 @@ export function Navigation() {
             <Link href="/" className="flex items-center">
               <Image 
                 src="/images/logos/muse_logo_horiz_paths.svg" 
-                alt="InspectionMuse Logo" 
+                alt="InspectionMuse home inspection services logo Carroll County Maryland" 
                 width={280} 
                 height={60}
                 priority

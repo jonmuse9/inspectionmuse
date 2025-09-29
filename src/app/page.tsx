@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     description: "Making your biggest investment your safest investment",
     url: "https://inspectionmuse.com/",
   },
+  twitter: {
+    card: "summary_large_image",
+    site: "@InspectionMuse",
+    creator: "@InspectionMuse",
+    title: "InspectionMuse - Professional Home Inspections",
+    description: "Making your biggest investment your safest investment",
+    images: ["/images/logos/muse_logo_360px.png"],
+  },
 }
 
 export default function Home() {

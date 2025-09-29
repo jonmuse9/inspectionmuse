@@ -39,7 +39,7 @@ export default function SchedulePage() {
       <section className="relative h-[400px] bg-gradient-to-br from-blue-900 to-blue-700">
         <Image
           src="/images/businesswoman-using-tablet-analysis.jpg"
-          alt="Professional scheduling inspection"
+          alt="Professional business woman scheduling home inspection Carroll County MD using tablet"
           fill
           className="object-cover opacity-30"
           priority

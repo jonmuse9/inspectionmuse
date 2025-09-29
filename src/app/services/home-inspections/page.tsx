@@ -1,12 +1,27 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { CheckCircle, Calendar, FileText } from "lucide-react"
-import { 
+import {
   ServiceHeroSection,
   ServiceCTASection,
   ServiceGallerySection,
   ChecklistSection
 } from "@/components/services"
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
+  title: "Home Inspections - Professional Property Inspectors Carroll County MD",
+  description: "Comprehensive home inspections in Carroll County, MD. Thorough evaluations of roof, foundation, HVAC, plumbing, and electrical systems to protect your investment.",
+  keywords: "home inspection, property inspection, Carroll County MD, home inspector, real estate inspection, house inspection, Maryland",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/home-inspections/",
+  },
+  openGraph: {
+    title: "Home Inspections - InspectionMuse Carroll County",
+    description: "Professional home inspections in Carroll County, MD. Thorough evaluations to protect your property investment.",
+    url: "https://inspectionmuse.com/services/home-inspections/",
+  },
+}
 
 export default function HomeInspectionsPage() {
   return (

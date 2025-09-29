@@ -12,6 +12,21 @@ import { ServiceHeroSection } from "@/components/services/ServiceHeroSection";
 import { ServiceCTASection } from "@/components/services/ServiceCTASection";
 import { ServiceOverviewSection } from "@/components/services/ServiceOverviewSection";
 import { ChecklistSection } from "@/components/services/ChecklistSection";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Sewer Scope Inspection - Video Camera Pipe Inspection Carroll County MD",
+  description: "Professional sewer scope inspections in Carroll County, MD. Video camera inspections of underground sewer lines to prevent costly repair surprises.",
+  keywords: "sewer scope, sewer inspection, video pipe inspection, Carroll County MD, sewer line, drain inspection, plumbing inspection, Maryland sewer scope",
+  alternates: {
+    canonical: "https://inspectionmuse.com/services/sewer-scope/",
+  },
+  openGraph: {
+    title: "Sewer Scope Inspection - InspectionMuse Carroll County",
+    description: "Professional sewer scope inspections in Carroll County, MD. Video camera technology to inspect underground sewer lines.",
+    url: "https://inspectionmuse.com/services/sewer-scope/",
+  },
+};
 
 export default function SewerScopePage() {
   return (

@@ -1,0 +1,54 @@
+# InspectionMuse - Professional Home Inspection Services
+
+/* TEAM */
+    Owner/Inspector: Jim Krumm
+    Contact: jim@inspectionmuse.com
+    Location: Washington State
+
+    Web Development: Claude & Development Team
+    Contact: support@inspectionmuse.com
+
+/* THANKS */
+    Thanks to all the homeowners who trust us with their inspections
+    Thanks to real estate agents for their continued referrals
+    Thanks to the open source community
+
+/* SITE */
+    Last update: 2024/09/29
+    Language: English
+    Doctype: HTML5
+    IDE: Visual Studio Code
+
+/* TECHNOLOGY STACK */
+    Frontend Framework: Next.js 14
+    UI Library: React 18
+    Styling: Tailwind CSS
+    Language: JavaScript
+    Hosting: Vercel
+    Analytics: Google Analytics
+    Forms: Contact Form Processing
+
+/* STANDARDS */
+    Web Standards: HTML5, CSS3, ES2022
+    Accessibility: WCAG 2.1 AA Compliant
+    SEO: Optimized for search engines
+    Performance: Lighthouse optimized
+    Security: Security headers implemented
+
+/* FEATURES */
+    Responsive Design: Mobile-first approach
+    Progressive Web App: PWA enabled
+    SEO Optimized: Structured data & meta tags
+    Performance: Optimized images and lazy loading
+
+                                    _.._
+                                  .'    '.
+                                 /   __   \
+                                |  /    \  |
+                                | |      | |
+                                | |      | |
+                                |  \____/  |
+                                 \        /
+                                  '.____.'
+
+                        Built with care for home inspections
